@@ -22,6 +22,9 @@ class CommentForm(forms.ModelForm):
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
     
-    
+ 
+class SearchForm(forms.Form):
+    query = forms.CharField() 
+   
     
     

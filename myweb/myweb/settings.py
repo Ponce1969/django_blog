@@ -42,6 +42,7 @@ INSTALLED_APPS = [
      'taggit', # se agrega la aplicacion taggit
     'django.contrib.sites',# se agrega la aplicacion sites, para mejorar
     'django.contrib.sitemaps', # se agrega la aplicacion sitemaps
+    'django.contrib.postgres', # se agrega la aplicacion postgres
       
      
 ]
@@ -83,8 +84,12 @@ WSGI_APPLICATION = 'myweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog_test',
+        'USER': 'blog',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
